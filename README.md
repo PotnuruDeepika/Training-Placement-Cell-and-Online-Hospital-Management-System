@@ -1,0 +1,2 @@
+# Training-Placement-Cell-and-Online-Hospital-Management-System
+Training &amp; Placement Cell and Online Hospital Management System Multiple Static Web Pages. In Online Hospital Management system,all appointments,Slot Bookings,admitting,Discharge and bills and all details of doctors,nurse and other staff can be operated through this web page.In Training &amp; Placement Cell,Student and faculty login,register and their details,Placement Related Information can be shown to the students and users.
