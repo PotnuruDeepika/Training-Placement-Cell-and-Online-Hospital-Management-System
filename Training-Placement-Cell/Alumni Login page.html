@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Alumni Details Login Page</title>
+    <style>
+        h1 {
+            text-decoration: underline;
+            font-size: 50px;
+            color: #48C9B0;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 0px;
+            padding: 0px 0px;
+            text-transform: uppercase;
+        }
+        
+        .dix {
+            /* text-align: left;
+            display: flex;
+            flex-direction: column; */
+            display: block;
+            text-align: center;
+            /* text-align: center; */
+            font-size: 20pt;
+        }
+        
+        body {
+            margin: 0px;
+            padding: 0px 0px;
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript">
+        function validate_check() {
+            var n = /^[a-zA-Z ]*$/;
+            if (!document.myform.Name.value.match(n)) {
+                alert("InValid Name!");
+                return false;
+            }
+            var r = /[a-zA-Z0-9]{1,10}$/;
+            if (document.myform.JN.value.lenth != 10) {
+                alert("InValid JNTU number!");
+                return false;
+            }
+
+            var re = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
+            if (!document.myform.EMail.value.match(re)) {
+                alert("InValid email address!");
+                // document.registration.email.focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body bgcolor="#F4ECF7">
+
+
+    <center>
+        <h1>Alumni Login Details</H1>
+    </center>
+    <form name="myform" ACTION="" METHOD="GET/POST">
+        <font face="extra bold" size="10" color="#A93226">
+            <div class="dix">
+                <br> Name : <input type="text" name="Name" id="name">
+                <br>
+                <!-- <button type="button" onclick="getInputValue();">Get Value</button>
+
+            <script>
+                function getInputValue() {
+                    // Selecting the input element and get its value 
+                    var inputVal = document.getElementById("jn").value;
+
+                    // Displaying the value
+                    alert(inputVal.length);
+                }
+            </script> -->
+                <br>Email id : <input type="text" name="EMail" id="Email">
+                <!-- <br><br>Mobile No. : <input type="text" name="Telephone" id="mobileno">
+                <br>
+                <br>address : <textarea rows="5" cols="20">
+</textarea><br>
+                <br>Department : <select name="Department" id="Department">
+            <option value="CSE">CSE</option>
+            <option value="IT">IT</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="MECH">MECH</option>
+            <option value="CIVIL">CIVIL</option>
+            <option value="CHEM">CHEM</option>
+        </select>
+                <br><br>Graduation Year : <input type="text" name="year" id="year">
+                <br> <br>Currently Working Company Name : <input type="text" name="company" id="company">
+                <br><br>CTC : <input type="text" name="ctc" id="ctc">
+
+            </div> -->
+                <br><br> <input type="reset" style="font-size:25pt; background-color:rgb(250, 135, 135);" value="Reset">
+                <input type="submit" style="font-size:25pt; background-color:rgb(250, 135, 135);;" onclick="validate_check();" value="LOGIN">
+        </font>
+    </form>
+</body>
+
+</html>

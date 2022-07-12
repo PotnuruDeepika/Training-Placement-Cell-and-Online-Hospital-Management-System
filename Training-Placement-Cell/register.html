@@ -1,0 +1,246 @@
+<!-- <!doctype html>
+<html>
+
+<head>
+    <title>Registration Form</title>
+    <style>
+        h1 {
+            text-decoration: underline;
+            font-size: 50px;
+            color: rgba(228, 20, 255, 0.897);
+            margin: 0px;
+            padding: 0px 0px;
+            text-transform: uppercase;
+        }
+        
+        body {
+            margin: 0px;
+            padding: 0px 0px;
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript">
+        function validate_check() {
+            var n = /^[a-zA-Z ]*$/;
+            if (!document.myform.Name.value.match(n)) {
+                alert("InValid Name!");
+                return false;
+            }
+            var jntu = /[a-zA-Z0- 9]{10}$/;
+            if (!document.myform.JN.value.match(jntu)) {
+                alert("InValid JNTU NO.");
+                return false;
+            }
+            var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            if (!document.myform.EMail.value.match(re)) {
+                alert("InValid email address!");
+                // document.registration.email.focus();
+                return false;
+            }
+            var m = /^[7-9][0-9]{9}$/;
+            //l = document.myform.Telephone.value.length);
+            if (!document.myform.Telephone.value.match(n)) {
+                alert("InValid Mobile Number!" + l);
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body bgcolor="#F6DDCC">
+    <center>
+        <h1>Registration Form</H1>
+    </center>
+    <form name="myform" ACTION="Registration.java" METHOD="POST">
+        <font face="extra bold" size="4" color="green">
+            <br><br> Name:<input type="text" name="Name" id="name">
+            <br><br>JNTU No.:<input type="text" name="JN" id="jn"><br>
+            <button type="button" onclick="getInputValue();">Get Value</button>
+
+            <script>
+                function getInputValue() {
+                    // Selecting the input element and get its value 
+                    var inputVal = document.getElementById("jn").value;
+
+                    // Displaying the value
+                    alert(inputVal.length);
+                }
+            </script>
+            <br>Email id:<input type="text" name="email" id="Email"><br>
+            <br>
+            <fieldset>
+                <legend>PERSONAL DETAILS</legend> <br>
+                <br>Mother Name:<input type="text" name="mothername"><br>
+                <br>Father Name:<input type="text" name="fathername"><br>
+                <br>Mobile No. :<input type="text" name="telephone" id="mobileno"><br>
+                <br>address:<textarea rows="5" cols="20">
+</textarea><br><br> dob:
+                <input type="date" name="dob">
+                <br><br>Gender: m<input type="radio" name="gen" value="m"> f
+                <input type="radio" name="gen" value="f">
+            </fieldset>
+            <br><br>
+            <fieldset>
+                <legend>Qualificatation DETAILS</legend> <br><br> lan known: tel
+                <input type="checkbox" name="telugu" value="tel"> hin
+                <input type="checkbox" name="hindi" value="hin"> eng
+                <input type="checkbox" name="english" value="eng"> Tam
+                <input type="checkbox" name="tamil" value="tam">
+                <br>
+                <br>School Name:<input type="text" name="schoolname"><br>
+                <br>college Name:<input type="text" name="intername"><br>
+                <br>Department: <select name="Department" id="Department">
+            <option value="CSE">CSE</option>
+            <option value="IT">IT</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="MECH">MECH</option>
+            <option value="CIVIL">CIVIL</option>
+            <option value="CHEM">CHEM</option>
+        </select>
+                <br><br> Year: <select name="Subject">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+             <option value="4">4</option>
+        </select>
+                <br><br>
+            </fieldset><br>
+            <br>
+            <input type="reset" style="font-size:25pt; background-color:rgba(250, 233, 135, 0.89);" value="Reset">
+            <input type="submit" style="font-size:25pt; background-color:rgba(250, 233, 135, 0.89);" onclick="validate_check();" value="Register">
+        </font>
+    </form>
+</body>
+
+</html> -->
+
+
+<!doctype html>
+<html>
+
+<head>
+    <title>Registration Form</title>
+    <style>
+        h1 {
+            text-decoration: underline;
+            font-size: 50px;
+            color: rgba(228, 20, 255, 0.897);
+            margin: 0px;
+            padding: 0px 0px;
+            text-transform: uppercase;
+        }
+        
+        body {
+            margin: 0px;
+            padding: 0px 0px;
+            text-align: center;
+        }
+    </style>
+    <!--<script type="text/javascript">
+        function validate_check() {
+            var n = /^[a-zA-Z ]*$/;
+            if (!document.myform.Name.value.match(n)) {
+                alert("InValid Name!");
+                return false;
+            }
+            var r = /[A-Z0-9]*$/;
+            if (document.myform.JN.value.length != 10) {
+                //print(document.myform.JN.value.length) 
+                alert("Invalid JNTU number!");
+                return false;
+            }
+
+            var re = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)$/;
+            if (!document.myform.EMail.value.match(re)) {
+                alert("InValid email address!");
+                // document.registration.email.focus();
+                return false;
+            }
+            var m = /^[7-9][0-9]{9}$/;
+            //l = document.myform.Telephone.value.length);
+            if (!document.myform.Telephone.value.match(n)) {
+                alert("InValid Mobile Number!" + l);
+                return false;
+            }
+
+            function validate_check() {
+                var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                if (!document.registration.email.value.match(re)) {
+                    alert("Invalid email address!");
+                    // document.registration.email.focus();
+                    return false;
+                }
+                // } else {
+                //     alert('invalid Email');
+                //     document.registration.email.focus();
+                //     return false;
+                var pas = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+                if (!document.registration.password.value.match(pas)) {
+                    alert("Invalid password!");
+                    return false;
+                }
+
+            }
+        }
+
+        function myFunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>-->
+</head>
+
+<body bgcolor="#F6DDCC">
+
+    <center>
+        <h1>Registration Form</H1>
+    </center>
+    <form name="myform" ACTION="./registerform" METHOD="POST">
+        <font face="extra bold" size="5" color="green">
+            <br><br> Name : <input type="text" name="name" style="font-size:16pt;" id="name">
+            <br><br>JNTU No. : <input type="text" name="JN" style="font-size:16pt;" id="jn"><br> only in capitals<br>
+            <!-- <button type="button" onclick="getInputValue();">Get Value</button>
+
+            <script>
+                function getInputValue() {
+                    // Selecting the input element and get its value 
+                    var inputVal = document.getElementById("jn").value;
+
+                    // Displaying the value
+                    alert(inputVal.length);
+                }
+            </script> -->
+            <br>Email id : <input type="text" name="mail" style="font-size:16pt;" id="Email"><br>
+            <br> Password:
+            <input type="password" style="font-size:16pt;" name="password" id="myInput" required><br>
+            <div class="cap"><input type="checkbox" onclick="myFunction()">Show Password
+                <br>Mobile No. : <input type="text" name="Telephone" style="font-size:16pt;" id="mobileno"><br>
+                <br> Department : <select name="Department" style="font-size:16pt;" id="Department">
+            <option value="CSE">CSE</option>
+            <option value="IT">IT</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="MECH">MECH</option>
+            <option value="CIVIL">CIVIL</option>
+            <option value="CHEM">CHEM</option>
+        </select>
+                <br> <br>Year : <select name="year" style="font-size:16pt;">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+             <option value="4">4</option>
+        </select>
+                <br><br>
+                <input type="reset" style="font-size:25pt; background-color:rgba(250, 233, 135, 0.89);" value="Reset">
+                <input type="submit" style="font-size:25pt; background-color:rgba(250, 233, 135, 0.89);  value="Submit">
+<!--"onclick="validate_check();"-->
+        </font>
+    </form>
+</body>
+
+</html>

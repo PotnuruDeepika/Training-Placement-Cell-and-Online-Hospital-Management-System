@@ -1,0 +1,1 @@
+create object("SAPI.SP VOICE")speak("Hello Deepika")

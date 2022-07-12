@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Placement Staff Details Page</title>
+    <style>
+        h1 {
+            text-decoration: underline;
+            font-size: 50px;
+            color: #E02143;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 0px;
+            padding: 0px 0px;
+            text-transform: uppercase;
+        }
+        
+        .hq {
+            margin: 0px;
+            padding: 0px 0px;
+            color: #e707c2;
+        }
+        
+        .dix {
+            /* text-align: left;
+            display: flex;
+            flex-direction: column; */
+            display: block;
+            text-align: center;
+            /* text-align: center; */
+            font-size: 20pt;
+        }
+        
+        body {
+            margin: 0px;
+            padding: 0px 0px;
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript">
+        function validate_check() {
+            var n = /^[a-zA-Z ]*$/;
+            if (!document.myform.Name.value.match(n)) {
+                alert("InValid Name!");
+                return false;
+            }
+            var r = /[a-zA-Z0-9]{1,10}$/;
+            if (document.myform.JN.value.lenth != 10) {
+                alert("InValid JNTU number!");
+                return false;
+            }
+
+            var re = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
+            if (!document.myform.EMail.value.match(re)) {
+                alert("InValid email address!");
+                // document.registration.email.focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body bgcolor="#A0D39C">
+
+    <center>
+        <h1>Placement Staff Details</H1>
+    </center>
+    <form name="myform" ACTION="" METHOD="GET/POST">
+        <font face="extra bold" size="4" color="#213DE0">
+            <div class="dix">
+                <h3 class="hq">Team-Career Development Center(CDC) </h3>
+                <br> Name : <input type="text" name="Name" id="name">
+                <br>
+                <!-- <button type="button" onclick="getInputValue();">Get Value</button>
+
+            <script>
+                function getInputValue() {
+                    // Selecting the input element and get its value 
+                    var inputVal = document.getElementById("jn").value;
+
+                    // Displaying the value
+                    alert(inputVal.length);
+                }
+            </script> -->
+                <br>Email id : <input type="text" name="EMail" id="Email">
+                <br><br>Mobile No. : <input type="text" name="Telephone" id="mobileno">
+                <br>
+                <br>Designation : <select name="Designation" id="Designation">
+                    <option value="Associate Manager Placement">Associate Manager Placement</option>
+                    <option value="Asst Manager Placement">Asst Manager Placement</option>
+                    <option value="CDC Executive">CDC Executive</option>
+                    <option value="Office Assistant">Office Assistant</option>
+                    <option value="Soft skill Trainer">Soft skill Trainer</option>
+                    <option value="Faculty Placement Coordinators
+                    ">Faculty Placement Coordinators
+                </option><br>
+                <br>
+        </select>
+
+
+            </div>
+            <br><br> <input type="reset" style="font-size:25pt; background-color:rgb(143, 91, 127);" value="Reset">
+            <input type="submit" style="font-size:25pt; background-color:rgb(143, 91, 127);" onclick="validate_check();" value="Submit">
+        </font>
+    </form>
+</body>
+
+</html>

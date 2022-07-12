@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Student Academic Info Page</title>
+    <style>
+        h1 {
+            text-decoration: underline;
+            font-size: 50px;
+            color: #229954;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0px;
+            padding: 0px 0px;
+            text-transform: uppercase;
+        }
+        
+        .dix {
+            /* text-align: left;
+            display: flex;
+            flex-direction: column; */
+            display: block;
+            text-align: center;
+            /* text-align: center; */
+            font-size: 20pt;
+        }
+        
+        body {
+            margin: 0px;
+            padding: 0px 0px;
+            text-align: center;
+        }
+    </style>
+    <!--<script type="text/javascript">
+        function validate_check() {
+            var n = /^[a-zA-Z ]*$/;
+            if (!document.myform.Name.value.match(n)) {
+                alert("InValid Name!");
+                return false;
+            }
+            var r = /[A-Z0-9]*$/;
+            if (document.myform.JN.value.length != 10) {
+                alert("InValid JNTU number!");
+                return false;
+            }
+
+            var re = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
+            if (!document.myform.EMail.value.match(re)) {
+                alert("InValid email address!");
+                // document.registration.email.focus();
+                return false;
+            }
+        }
+    </script>-->
+</head>
+
+<body bgcolor="pink">
+
+
+    <center>
+        <h1>Student Academic Details</H1>
+    </center>
+    <form name="myform" ACTION="insertion.jsp" METHOD="POST">
+        <font face="extra bold" size="4" color="#6495ED">
+            <div class="dix">
+                <br> Name : <input type="text" name="Name" id="name" required>
+                <br><br>JNTU No. : <input type="text" name="JN" id="jn"><br>
+                <!-- <button type="button" onclick="getInputValue();">Get Value</button>
+
+            <script>
+                function getInputValue() {
+                    // Selecting the input element and get its value 
+                    var inputVal = document.getElementById("jn").value;
+
+                    // Displaying the value
+                    alert(inputVal.length);
+                }
+            </script> -->
+                <br>Email id : <input type="text" name="EMail" id="Email"><br>
+                <br>Department : <select name="Department" id="Department">
+            <option value="CSE">CSE</option>
+            <option value="IT">IT</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="MECH">MECH</option>
+            <option value="CIVIL">CIVIL</option>
+            <option value="CHEM">CHEM</option>
+        </select>
+                <br><br> Year : <select name="Subject">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+             <option value="4">4</option>
+        </select>
+                <br> CGPA :
+                <input type="text" name="cpga" id="cpga">
+                <br><br>Any Backlogs :
+                <label class="container">YES
+                    <input type="radio" checked="checked" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                <label class="container">NO
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+            </div>
+            <br><br> <input type="reset" style="font-size:25pt; background-color:rgba(135, 250, 212, 0.89);" value="Reset">
+            <input type="submit" style="font-size:25pt; background-color:rgba(135, 250, 212, 0.89);value="Submit">
+           <!--" onclick="validate_check();"-->
+        </font>
+    </form>
+</body>
+
+</html>

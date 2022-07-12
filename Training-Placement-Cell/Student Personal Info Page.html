@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Student Personal Info Page</title>
+    <style>
+        h1 {
+            text-decoration: underline;
+            font-size: 50px;
+            color: rgba(255, 20, 79, 0.849);
+            margin: 0px;
+            padding: 0px 0px;
+            text-transform: uppercase;
+            font-family: "algerian";
+        }
+        
+        body {
+            margin: 0px;
+            padding: 0px 0px;
+            text-align: center;
+            font-size: 16pt;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+        }
+        
+        input {
+            font-size: 16pt;
+        }
+    </style>
+    <script type="text/javascript">
+        function validate_check() {
+            var n = /^[a-zA-Z ]*$/;
+            if (!document.myform.Name.value.match(n)) {
+                alert("InValid Name!");
+                return false;
+            }
+            var r = /[A-Z0-9]{1,10}$/;
+            if (document.myform.JN.value.length != 10) {
+                alert("InValid JNTU number!");
+                return false;
+            }
+
+            var re = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
+            if (!document.myform.EMail.value.match(re)) {
+                alert("InValid email address!");
+                // document.registration.email.focus();
+                return false;
+            }
+            var m = /^[7-9][0-9]{9}$/;
+            //l = document.myform.Telephone.value.length);
+            if (!document.myform.Telephone.value.match(n)) {
+                alert("InValid Mobile Number!" + l);
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body bgcolor="#48C9B0">
+
+    <center>
+        <h1>Student Personal Details</H1>
+    </center>
+    <form name="myform" ACTION="" METHOD="GET/POST">
+        <font size="4" color="purple">
+            <br><br> Name : <input type="text" style="font-size:16pt;" name="Name" id="name">
+            <br><br>JNTU No. : <input type="text" name="JN" id="jn"><br>
+            <!-- <button type="button" onclick="getInputValue();">Get Value</button>
+
+            <script>
+                function getInputValue() {
+                    // Selecting the input element and get its value 
+                    var inputVal = document.getElementById("jn").value;
+
+                    // Displaying the value
+                    alert(inputVal.length);
+                }
+            </script> -->
+            <br>Email id : <input type="text" name="EMail" id="Email"><br>
+            <br> Mother Name : <input type="text" name="mothername"><br>
+            <br>Father Name : <input type="text" name="fathername"><br>
+            <br>Mobile No. : <input type="text" name="Telephone" id="mobileno"><br>
+            <br>address : <textarea rows="5" cols="20">
+</textarea><br><br> dob:
+            <input type="date" name="dob">
+            <!-- <br><br>Gender : m<input type="radio" name="gen" value="m"> f
+            <input type="radio" name="gen" value="f"> -->
+            <!-- <br><br> Languages : Telugu
+            <input type="checkbox" name="telugu" value="tel"> Hindi
+            <input type="checkbox" name="hindi" value="hin"> English
+            <input type="checkbox" name="english" value="eng"> tamil
+            <input type="checkbox" name="tamil" value="tam">Others
+            <input type="checkbox" name="others" value="others">
+            <br> -->
+
+            <br><br>Gender :
+            <label class="container">Male
+                    <input type="radio" checked="checked" name="gen" value="m">
+                    <span class="checkmark"></span>
+                  </label>
+            <label class="container">Female
+                    <input type="radio" checked="checked" name="gen" value="f">
+                    <span class="checkmark"></span>
+                  </label>
+            <br><br>Languages :
+            <label class="container">Telugu
+                    <input type="checkbox" checked="checked" name="ra">
+                    <span class="checkmark"></span>
+                  </label>
+            <label class="container">English
+                    <input type="checkbox" name="ra">
+                    <span class="checkmark"></span>
+                  </label>
+            <label class="container">Hindi
+                    <input type="checkbox" name="ra">
+                    <span class="checkmark"></span>
+                  </label>
+            <label class="container">Tamil
+                    <input type="checkbox" name="ra">
+                    <span class="checkmark"></span>
+                  </label>
+            <label class="container">Others
+                    <input type="checkbox" name="ra">
+                    <span class="checkmark"></span>
+                  </label>
+
+            <br><br>School Name : <input type="text" name="schoolname"><br>
+            <br>Intermediate college Name : <input type="text" name="intername"><br>
+            <br>Department : <select name="Department" id="Department">
+            <option value="CSE">CSE</option>
+            <option value="IT">IT</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="MECH">MECH</option>
+            <option value="CIVIL">CIVIL</option>
+            <option value="CHEM">CHEM</option>
+        </select>
+            <br><br> Year : <select name="Subject">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+             <option value="4">4</option>
+        </select>
+            <br><br>
+            <br>
+            <br>
+            <input type="reset" style="font-size:25pt; background-color:rgb(250, 135, 135);" value="Reset">
+            <input type="submit" style="font-size:25pt; background-color:rgb(250, 135, 135);" onclick="validate_check();" value="Submit">
+        </font>
+    </form>
+</body>
+
+</html>
