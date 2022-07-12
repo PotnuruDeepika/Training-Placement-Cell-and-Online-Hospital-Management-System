@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Registration Form</title>
+    <style>
+        h1 {
+            text-decoration: underline;
+            font-size: 50px;
+            color: rgba(216, 203, 20, 0.973);
+            margin: 0px;
+            padding: 0px 0px;
+            text-transform: uppercase;
+        }
+        
+        body {
+            margin: 0px;
+            padding: 0px 0px;
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript">
+        function validate_check() {
+            var n = /^[a-zA-Z ]*$/;
+            if (!document.myform.Name.value.match(n)) {
+                alert("InValid Name!");
+                return false;
+            }
+            var r = /[A-Z0-9]*$/;
+            if (document.myform.JN.value.length != 10) {
+                //print(document.myform.JN.value.length) 
+                alert("Invalid JNTU number!");
+                return false;
+            }
+
+            var re = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)$/;
+            if (!document.myform.EMail.value.match(re)) {
+                alert("InValid email address!");
+                // document.registration.email.focus();
+                return false;
+            }
+            var m = /^[7-9][0-9]{9}$/;
+            //l = document.myform.Telephone.value.length);
+            if (!document.myform.Telephone.value.match(n)) {
+                alert("InValid Mobile Number!" + l);
+                return false;
+            }
+
+            function validate_check() {
+                var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                if (!document.registration.email.value.match(re)) {
+                    alert("Invalid email address!");
+                    // document.registration.email.focus();
+                    return false;
+                }
+                // } else {
+                //     alert('invalid Email');
+                //     document.registration.email.focus();
+                //     return false;
+                var pas = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+                if (!document.registration.password.value.match(pas)) {
+                    alert("Invalid password!");
+                    return false;
+                }
+
+            }
+        }
+
+        function myFunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <center>
+        <h1>
+            Register</H1>
+    </center>
+    <form name="myform" ACTION="Registration.java" METHOD="POST">
+        <font face="extra bold" size="5" color="darkpink">
+            <br><br> Name : <input type="text" name="name" style="font-size:16pt;" id="name">
+            <br><br>Email id : <input type="text" name="mail" style="font-size:16pt;" id="Email"><br>
+            <br> Password:
+            <input type="password" style="font-size:16pt;" name="password" id="myInput" required><br>
+            <div class="cap"><input type="checkbox" onclick="myFunction()">Show Password
+                <br>Mobile No. : <input type="text" name="Telephone" style="font-size:16pt;" id="mobileno"><br>
+                <br> Staff Type: <select name="Department" style="font-size:16pt;" id="Department">
+            <option value="Doctor">Doctor</option>
+            <option value="Nurse">Nurse</option>
+            <option value="Other">Others</option>
+        </select>
+                <br> <br>Gender: Male<input type="radio" name="gen " value="m"> Female
+                <input type="radio" name="gen" value="f"> <br><br>Age: <input type="text" name="age" style="font-size:16pt;" id="age">
+                <br><br>Speciality:<input type="text" name="name" style="font-size:16pt;" id="name"><br><br>
+                <input type="reset" style="font-size:25pt; background-color:rgba(166, 135, 250, 0.89);" value="Reset">
+                <input type="submit" style="font-size:25pt; background-color:rgba(166, 233, 135, 0.89);" onclick="validate_check();" value="Register">
+        </font>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Admitting</title>
+    <style>
+        h1 {
+            text-decoration: underline;
+            font-size: 50px;
+            color: rgba(151, 11, 245, 0.973);
+            margin: 0px;
+            padding: 0px 0px;
+            text-transform: uppercase;
+        }
+        
+        body {
+            font-family: "Helvetica Neue", Helvetica;
+            padding: 10px;
+            margin: 0px;
+        }
+        
+        form {
+            color: deeppink;
+            font-size: 25px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+    <script type="text/javascript">
+        function validate_check() {
+            var n = /^[a-zA-Z ]*$/;
+            if (!document.myform.Name.value.match(n)) {
+                alert("InValid Name!");
+                return false;
+            }
+            var r = /[A-Z0-9]*$/;
+            if (document.myform.JN.value.length != 10) {
+                //print(document.myform.JN.value.length) 
+                alert("Invalid JNTU number!");
+                return false;
+            }
+
+            var re = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9-]+)$/;
+            if (!document.myform.EMail.value.match(re)) {
+                alert("InValid email address!");
+                // document.registration.email.focus();
+                return false;
+            }
+            var m = /^[7-9][0-9]{9}$/;
+            //l = document.myform.Telephone.value.length);
+            if (!document.myform.Telephone.value.match(n)) {
+                alert("InValid Mobile Number!" + l);
+                return false;
+            }
+
+            function validate_check() {
+                var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                if (!document.registration.email.value.match(re)) {
+                    alert("Invalid email address!");
+                    // document.registration.email.focus();
+                    return false;
+                }
+                // } else {
+                //     alert('invalid Email');
+                //     document.registration.email.focus();
+                //     return false;
+                var pas = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+                if (!document.registration.password.value.match(pas)) {
+                    alert("Invalid password!");
+                    return false;
+                }
+
+            }
+        }
+
+        function myFunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <center>
+        <h1>
+            Admitting Form</H1>
+        <h3>
+            <pre>       -Have a Fast Recovery</pre>
+        </h3>
+    </center>
+    <form name="myform" ACTION="Registration.java" METHOD="POST">
+
+        Patient Name : <input type=" text " name="name " style="font-size:16pt; " id="name ">
+        <br><br>Father Name: <input type="text " name="fname " style="font-size:16pt; " id="Email "><br>
+        <br> Age: <input type="text " name="age " style="font-size:16pt; " id="age ">
+
+        <br><br>Mobile No. : <input type="text " name="Telephone " style="font-size:16pt; " id="mobileno "><br>
+        <br> Type Of Room: <select name="Department " style="font-size:16pt; " id="Department ">
+            <option value="special ">Special</option>
+            <option value="Nor ">Normal</option>
+            <option value="Other ">Ward</option>
+        </select>
+        <br> <br>Gender: Male<input type="radio" name="gen " value="m "> Female
+        <input type="radio" name="gen " value="f ">
+        <br><br> Problem:
+        <input type="text " name="name " style="font-size:16pt; " id="name ">
+        <br><br> No. Of Days: <input type="text " name="days " style="font-size:16pt; " id="days ">
+        <br><br> Consultant Doctor Name: <input type="text " name="dname " style="font-size:16pt; " id="age ">
+        <br><br>
+        <input type="reset" style="font-size:25pt; background-color:rgba(15, 199, 113, 0.89); " value="Reset ">
+        <input type="submit" style="font-size:25pt; background-color:rgba(15, 199, 113, 0.89); " onclick="validate_check(); " value="Admit ">
+
+    </form>
+</body>
+
+</html>
